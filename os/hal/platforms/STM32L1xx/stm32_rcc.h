@@ -568,6 +568,36 @@
 #define rccResetUSB() rccResetAPB1(RCC_APB1RSTR_USBRST)
 /** @} */
 
+/**
+ * @name    LCD peripheral specific RCC operations
+ * @{
+ */
+/**
+ * @brief   Enables the LCD peripheral clock.
+ *
+ * @param[in] lp        low power enable flag
+ *
+ * @api
+ */
+#define rccEnableLCD(lp) rccEnableAPB1(RCC_APB1ENR_LCDEN, lp)
+
+/**
+ * @brief   Disables the LCD peripheral clock.
+ *
+ * @param[in] lp        low power enable flag
+ *
+ * @api
+ */
+#define rccDisableLCD(lp) rccDisableAPB1(RCC_APB1ENR_LCDEN, lp)
+
+/**
+ * @brief   Resets the LCD peripheral.
+ *
+ * @api
+ */
+#define rccResetLCD() rccResetAPB1(RCC_APB1RSTR_LCDRST)
+/** @} */
+
 /*===========================================================================*/
 /* External declarations.                                                    */
 /*===========================================================================*/
