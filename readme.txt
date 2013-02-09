@@ -82,6 +82,16 @@
 *****************************************************************************
 
 *** 2.5.2 ***
+- FIX: Fixed adcSTM32EnableTSVREFE must be called AFTER adcStart (bug
+  3602950).
+- FIX: Fixed duplicated code in hal_lld.h (STM32F4xx) (bug 3602544)
+  (backported to 2.4.4).
+- FIX: Fixed #define typo in usb_lld.h (OTGv1) (bug 3602306).
+- FIX: Fixed STM32F0 RCC enable/disable/reset functions for CRC and WWDG
+  (bug 3602150).
+- FIX: Fixed missing parenthesis in use of macro arguments (bug 3601638).
+- FIX: Fixed compile errors in Posix-GCC demo (bug 3601621)(backported
+  to 2.4.4).
 - FIX: Fixed state checker error in MSP430 port (bug 3601460)(backported
   to 2.4.4).
 - FIX: Fixed wrong assertion in UART driver (bug 3600789)(backported
@@ -102,6 +112,7 @@
   TODO: Create a FatFS wrapper implementing the interface and using a server
   thread for synchronization.
   TODO: Create an implementation over a read-only file system in code space.
+- NEW: CAN2 support for STM32 added.
 - NEW: Updated STM32L1xx header to the latest version.
 - NEW: Added an option to lwipthread to change the link status poll interval.
 - NEW: Added new C++ demo for the STM32F4-Discovery.
